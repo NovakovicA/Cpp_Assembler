@@ -1,0 +1,49 @@
+#--Symbol table--
+#index name  section  offset type
+0       UND 0 local
+1   x1 UND 0 global
+2   s2 .data 1 global
+3   s5 .test1 1 global
+4   s8 .test2 1 global
+5   e6 .data 3 global
+6   s1 .data 0 local
+7   s4 .test1 0 local
+8   s7 .test2 0 local
+9   e5 .data 1 local
+10   s3 .data 2 local
+11   e4 UND 1024 local
+12   e3 ABS 768 local
+13   e2 ABS 512 local
+14   e1 ABS 256 local
+15   .data .data 0 local
+16   .test1 .test1 0 local
+17   s6 .test1 2 local
+18   .test2 .test2 0 local
+19   s9 .test2 2 local
+20   .text .text 0 local
+#--End of symbol table--
+
+# Relocation record - .data
+# offset   type   symbol 
+02  R_16 .data
+
+# Relocation record - .test1
+# offset   type   symbol 
+02  R_16 .test1
+
+# Relocation record - .test2
+# offset   type   symbol 
+02  R_16 .test2
+
+# Relocation record - .text
+# offset   type   symbol 
+07  R_16 .data
+
+# .data
+00 FF 00 
+# .test1
+00 FF 00 
+# .test2
+00 FF 00 
+# .text
+6C 80 00 01 20 6C 80 03 00 20 

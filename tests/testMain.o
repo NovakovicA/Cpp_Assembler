@@ -1,0 +1,40 @@
+#--Symbol table--
+#index name  section  offset type
+0       UND 0 local
+1   x1 UND 0 global
+2   g1 .data 5 global
+3   .data .data 0 local
+4   s1 .data 5 local
+5   s2 .data 5 local
+6   s3 .data 5 local
+7   s5 .data 25 local
+8   s4 .data 13 local
+9   res .data 26 local
+10   .text .text 0 local
+11   repeat .text 5 local
+12   end1 .text 53 local
+13   end0 .text 40 local
+14   .bss .bss 0 local
+#--End of symbol table--
+
+# Relocation record - .data
+# offset   type   symbol 
+09  R_16 .data
+0B  R_16 x1
+07  R_16 .data
+
+# Relocation record - .text
+# offset   type   symbol 
+02  R_16 .data
+07  R_16 .data
+23  R_16 .text
+32  R_16 .data
+3F  R_16 .data
+1F  R_16 .text
+
+# .data
+00 00 00 00 00 64 00 19 00 05 00 00 00 AA AA 00 00 00 00 00 00 00 00 00 00 FF 00 
+# .text
+64 80 05 00 20 74 80 19 00 20 74 00 01 00 20 8C 20 00 01 00 44 6E 33 00 8C 20 00 00 00 44 00 28 00 64 00 05 00 22 2C 22 64 00 00 00 20 64 00 00 00 60 0D 00 00 64 00 00 00 20 64 00 01 00 60 0D 00 00 
+# .bss
+00 00 00 00 00 00 00 00 00 00 
